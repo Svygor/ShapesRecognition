@@ -61,11 +61,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="Models\Base\NeuronBase.cs" />
+    <Compile Include="Models\ConvNet\ConvNetwork.cs" />
+    <Compile Include="Models\ConvNet\ConvNeuron.cs" />
     <Compile Include="Models\NeuronHidden.cs" />
     <Compile Include="Models\Neuron.cs" />
     <Compile Include="Models\NeuroNet.cs" />
     <Compile Include="Models\NeuronInput.cs" />
     <Compile Include="Models\NeuronOutput.cs" />
+    <Compile Include="Services\RNG.cs" />
     <Compile Include="View\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -102,9 +105,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Images\circle.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

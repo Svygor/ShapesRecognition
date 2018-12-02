@@ -1,4 +1,5 @@
 ﻿using ShapesRecognition.Models.Base;
+using ShapesRecognition.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,8 +23,6 @@ namespace ShapesRecognition.Models
         //зменения весов (нужны для вычисления следующего изменения веса)
         //Изначально все = 0
         public double[] _weightsChanges;
-
-        private Random rnd = new Random();
 
         /// <summary>
         /// Подсчет взвешенной суммы входных сигналов
@@ -61,7 +60,7 @@ namespace ShapesRecognition.Models
 
             for (int i = 0; i < length; i++)
             {
-                Weights[i] = rnd.Next(20, 80) * 0.001;
+                Weights[i] = RNG.GetInstanse().GetWeight();
             }
         }
 

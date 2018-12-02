@@ -5,10 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShapesRecognition"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="181.325" Width="325.753">
     <Grid>
-        <Button x:Name="Learn" Content="Start Learning" HorizontalAlignment="Left" Margin="373,52,0,0" VerticalAlignment="Top" Width="100" Height="70" Click="Learn_Click"/>
-        <Button x:Name="Test" Content="Test" HorizontalAlignment="Left" Margin="373,141,0,0" VerticalAlignment="Top" Width="100" Height="70" Click="Test_Click"/>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="292" Margin="10,0,0,0">
+            <TabItem x:Name="Perceptron" Header="Perceptron">
+                <Grid Background="#FFE5E5E5" Margin="0,0,0,2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="Learn" Content="Start Learning" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Height="70" Click="Learn_Click"/>
+                    <Button x:Name="Test" Content="Test" HorizontalAlignment="Left" Margin="156,10,0,0" VerticalAlignment="Top" Width="100" Height="70" Click="Test_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="ConvNet" Header="ConvNet">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="TrainConvNet" Content="Train" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Height="84" Click="TrainConvNet_Click"/>
+                    <Button x:Name="TestConvNet" Content="Test" HorizontalAlignment="Left" Margin="176,10,0,0" VerticalAlignment="Top" Width="100" Height="84" Click="TestConvNet_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>
