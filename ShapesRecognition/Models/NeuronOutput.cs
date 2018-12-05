@@ -14,8 +14,8 @@ namespace ShapesRecognition.Models
         /// <param name="idelaOutput">ожидаемое значение на выходе нейрона</param>
         public void CalculateDelta(double idelaOutput)
         {
-            //Delta = (idelaOutput - Output) * (1 - Output) * Output;
-            Delta = (idelaOutput - Output);
+            Delta = (idelaOutput - Output) * (1 - Output) * Output;
+            //Delta = (idelaOutput - Output);
         }
     }
 }

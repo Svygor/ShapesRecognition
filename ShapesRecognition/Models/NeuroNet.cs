@@ -81,7 +81,7 @@ namespace ShapesRecognition.Models
             }
 
             //цифра в 1000 нейронов в скрытом слое вообще наугад взята
-            HiddenLayer = new NeuronHidden[1000];
+            HiddenLayer = new NeuronHidden[400];
             for (int i = 0; i < HiddenLayer.Length; i++)
             {
                 HiddenLayer[i] = new NeuronHidden();
@@ -95,8 +95,8 @@ namespace ShapesRecognition.Models
             }
 
             //Момент и скорость обучения - это так называемые гиперпараметры. Выбираем их от балды для начала.
-            Momentum = 0.3;
-            LearningSpeed = 0.7;
+            Momentum = 0.1;
+            LearningSpeed = 0.2;
         }
 
         /// <summary>

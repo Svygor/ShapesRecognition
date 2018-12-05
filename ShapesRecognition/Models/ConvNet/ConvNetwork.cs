@@ -88,6 +88,28 @@ namespace ShapesRecognition.Models.ConvNet
         }
 
         /// <summary>
+        /// Обучение нейронной сети
+        /// </summary>
+        /// <param name="inputsList">Список массивов входных значений</param>
+        /// <param name="outputsList">Список массивов входных значений</param>
+        public void Learn(List<byte[,]> inputsList, List<double[]> outputsList, int iterations)
+        {
+            for (int i = 0; i < iterations; i++)
+            {
+                for (int j = 0; j < inputsList.Count; j++)
+                {
+                    Think(inputsList[j]);
+                    UpdateWeights(Output, outputsList[j]);
+                }
+            }
+        }
+
+        private void UpdateWeights(double[] output, double[] v)
+        {
+
+        }
+
+        /// <summary>
         /// Преобрпзование массива двумерных массивов в одномерный массив
         /// </summary>
         /// <param name="arrays"></param>

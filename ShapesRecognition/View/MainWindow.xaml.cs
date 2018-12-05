@@ -106,7 +106,7 @@ namespace ShapesRecognition
 
 
             NeuroNet = new NeuroNet();
-            NeuroNet.Learn(EducationalInputs, EducationalOutputs, 100);
+            NeuroNet.Learn(EducationalInputs, EducationalOutputs, 1000);
 
             MessageBox.Show("Learning Succesfully Completed");
         }

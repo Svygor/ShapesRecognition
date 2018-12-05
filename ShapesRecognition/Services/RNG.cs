@@ -19,7 +19,7 @@ namespace ShapesRecognition.Services
             }
             public double GetWeight()
             {
-                return rnd.Next(10,90)*0.001;
+                return rnd.Next(30,50)*0.00001;
             }
         }
 
